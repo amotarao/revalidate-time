@@ -5,3 +5,5 @@ export async function GET():Promise<NextResponse> {
   revalidateTag('now');
   return NextResponse.json({ revalidated: true, now: Date.now() });
 }
+
+export const dynamic = 'force-dynamic';
