@@ -1,5 +1,6 @@
 export default async function Home() {
-  const apiEndpoint = new URL('/api/now', process.env.VERCEL_URL || 'http://localhost:3000');
+  const origin = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000';
+  const apiEndpoint = new URL('/api/now', origin);
   const res = await fetch(apiEndpoint, { next: { tags: ['now'] } });
   const json = await res.json();
 
