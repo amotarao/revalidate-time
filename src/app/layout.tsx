@@ -21,4 +21,4 @@ export default function RootLayout({
   )
 }
 
-export const revalidate = 3600;
+export const revalidate = 86400;
